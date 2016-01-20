@@ -4,9 +4,12 @@ var request = require('request'),
 
 var file = fs.createWriteStream('google.html');
 
-request('http://www.google.com', function (error, response, body) {
+request('https://news.ycombinator.com/', function (error, response, body) {
   if (!error && response.statusCode == 200) {
-    file.write(body); // Show the HTML for the Google homepage.
+    var $ = cheerio.load(body);
+    $('.title a').each(function() {
+      console.log($(this).text());
+    })
   }
 });
 

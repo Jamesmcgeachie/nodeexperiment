@@ -29,3 +29,9 @@ request for making network requests.
 From here we wrote the require lines at the start of the scraper file (I called it scraper.js, Tyler used index.js)
 
 Then we used the code from the request github repo.
+
+We started off just requesting all the google homepage html code.
+
+Then we went on to scraping Hacker News.
+
+We used cheerio to help with with element selection to scrape.
