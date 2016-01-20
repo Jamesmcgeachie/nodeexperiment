@@ -1,0 +1,31 @@
+Tyler's learnyounode web scraper session!
+
+---
+
+Tyler started going through synchronous vs asynchronous and single threading.
+
+Mentioned that with code where you have callbacks, it can be hard to predict the order of outputs as it's asynchronous and you'll only get certain responses after the callback function completes.
+
+Blocking:
+
+  -certain requests are slow. Those events are blocking.
+  -When doing things synchronously, this means you can't do anything while waiting for one task to finish. This is a problem especially in the browser.
+
+Node - able to delegate some programming tasks to subprocesses on a separate thread.
+  -so the tasks go from the event queue to a subprocess, then back to the event queue once they're done.
+
+Start a Node project:
+
+npm init
+  - doing this we go through configuring the package.json file first
+
+npm install request --save
+npm install cheerio --save
+
+request for making network requests.
+
+--save records these in the package.json file. Important for dependency management.
+
+From here we wrote the require lines at the start of the scraper file (I called it scraper.js, Tyler used index.js)
+
+Then we used the code from the request github repo.
